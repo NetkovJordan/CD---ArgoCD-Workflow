@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ocean-app-ingress
+  namespace: ocean
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ocean-app.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ocean-app-service
+            port:
+              number: 5000
