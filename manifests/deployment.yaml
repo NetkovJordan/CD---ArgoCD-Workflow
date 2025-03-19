@@ -6,6 +6,7 @@ metadata:
   labels:
     app:  ocean-app
 spec:
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: ocean-app
@@ -26,7 +27,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  ocean-app
-        image:  netkovjordan/ocean_app:v1.0
+        image: netkovjordan/ocean_app:v1.0
         resources:
           requests:
             cpu: 100m
