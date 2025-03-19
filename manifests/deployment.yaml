@@ -26,7 +26,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  ocean-app
-        image: netkovjordan/ocean_app:v1.1:v1.0
+        image: netkovjordan/ocean_app:v1.1:v1.1:v1.0
         resources:
           requests:
             cpu: 100m
